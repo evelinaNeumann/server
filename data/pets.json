@@ -1,0 +1,99 @@
+{
+    "dogs": [
+      {
+        "name": "Buddy",
+        "category": "dog",
+        "type": "Labrador Retriever",
+        "age": 3,
+        "temper": "friendly",
+        "special_needs": false,
+        "image": "https://i.ibb.co/5Ft1C95/labrador-buddy.jpg"
+      },
+      {
+        "name": "Max",
+        "category": "dog",
+        "type": "German Shepherd",
+        "age": 2,
+        "temper": "loyal",
+        "special_needs": true,
+        "image": "https://i.ibb.co/34xhbH0/German-Shepherd-max.jpg"
+      },
+      {
+        "name": "Charlie",
+        "category": "dog",
+        "type": "Golden Retriever",
+        "age": 5,
+        "temper": "playful",
+        "special_needs": false,
+        "image": "https://i.ibb.co/ZM4TDbZ/Golden-Retriever-charlie.jpg"
+      },
+      {
+        "name": "Cooper",
+        "category": "dog",
+        "type": "Poodle",
+        "age": 1,
+        "temper": "smart",
+        "special_needs": false,
+        "image": "https://i.ibb.co/pJTNpwF/Poodle-Cooper.jpg"
+      }
+    ],
+    "cats": [
+      {
+        "name": "Luna",
+        "category": "cat",
+        "type": "Persian",
+        "age": 4,
+        "temper": "calm",
+        "special_needs": false,
+        "image": "https://i.ibb.co/NN2TKnc/Persian-Cat-luna.jpg"
+      },
+      {
+        "name": "Oliver",
+        "category": "cat",
+        "type": "Siamese",
+        "age": 2,
+        "temper": "talkative",
+        "special_needs": true,
+        "image": "https://i.ibb.co/bbZ9Tk2/Siamese-Cat-oliver.jpg"
+      },
+      {
+        "name": "Simba",
+        "category": "cat",
+        "type": "Maine Coon",
+        "age": 3,
+        "temper": "playful",
+        "special_needs": false,
+        "image": "https://i.ibb.co/6wTSQNF/maine-coon-simba.jpg"
+      },
+      {
+        "name": "Milo",
+        "category": "cat",
+        "type": "Bengal",
+        "age": 1,
+        "temper": "active",
+        "special_needs": false,
+        "image": "https://i.ibb.co/CVb6mxr/Bengal-Cta-milo.jpg"
+      }
+    ],
+    "small_pets": [
+      {
+        "name": "Nibbles",
+        "category": "small_pet",
+        "type": "Hamster",
+        "age": 1,
+        "temper": "curious",
+        "special_needs": false,
+        "image": "https://i.ibb.co/1rtMW1k/Hamster-nibbles.jpg"
+      },
+      {
+        "name": "Bunny",
+        "category": "small_pet",
+        "type": "Rabbit",
+        "age": 2,
+        "temper": "gentle",
+        "special_needs": false,
+        "image": "https://i.ibb.co/3Rfv31p/rabbit-bunny.jpg"
+      }
+    ]
+  }
+  

@@ -1,0 +1,122 @@
+[
+    {
+      "name": "Premium Dog Food Wolfsblut Adult",
+      "category": "Food",
+      "price": 19.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/XkNdg9g/Wolfsblut-Adult.jpg"
+    },
+    {
+      "name": "Interactive Cat Toy FYNIGO",
+      "category": "Toys",
+      "price": 9.99,
+      "description": "Keeps your cat entertained for hours",
+      "quantity": 5,
+      "image": "https://i.ibb.co/qYhH8qV/FYNIGO-Cat-Toy.jpg"
+    },
+    {
+      "name": "Cozy Pet Bed wuuhoo",
+      "category": "Beds",
+      "price": 29.99,
+      "description": "Soft and comfortable bed for your pet's relaxation",
+      "quantity": 3,
+      "image": "https://i.ibb.co/HY3Y6HN/wuuhoo-cosy-pet-bed.jpg"
+    },
+    {
+      "name": "Rabbit Hutch Eugad e754",
+      "category": "Housing",
+      "price": 89.99,
+      "description": "A comfortable home for your pet rabbit",
+      "quantity": 4,
+      "image": "https://i.ibb.co/sgWmXbC/Eugad-e754-Rabbit-Hutch.jpg"
+    },
+    {
+      "name": "Hamster Cage Gernsbach Rodent",
+      "category": "Housing",
+      "price": 34.99,
+      "description": "A comfortable home for your pet hamster",
+      "quantity": 3,
+      "image": "https://i.ibb.co/vPFkrz4/Gernsbach-Rodent-Humster-Cage.jpg"
+    },
+    {
+      "name": "Dog Chew Toy",
+      "category": "Toys",
+      "price": 21.99,
+      "description": "Durable toy for dogs that love to chew",
+      "quantity": 8,
+      "image": "https://i.ibb.co/HP6Ck8T/Dog-Chew-Toy.jpg"
+    },
+    {
+      "name": "Cat Scratching Post Malatec 7935",
+      "category": "Toys",
+      "price": 34.99,
+      "description": "Helps keep your cat's claws healthy",
+      "quantity": 8,
+      "image": "https://i.ibb.co/fYym37q/Malatec-7935-Cat-Scratching-Post.jpg"
+    },
+    {
+      "name": "Dog Collar Riparo K-9 Padded",
+      "category": "Accessories",
+      "price": 49.99,
+      "description": "Stylish collar for your canine companion",
+      "quantity": 10,
+      "image": "https://i.ibb.co/DrgYNqn/Riparo-K-9-Padded-Dog-Collar.jpg"
+    },
+    {
+      "name": "Cat Litter Box",
+      "category": "Accessories",
+      "price": 29.99,
+      "description": "A convenient and private spot for your cat to do its business",
+      "quantity": 5,
+      "image": "https://i.ibb.co/dbvK0WZ/cat-litter-box.jpg"
+    },
+    {
+      "name": "Dog Shampoo Glückstier",
+      "category": "Grooming",
+      "price": 12.99,
+      "description": "Cleans and conditions your dog's coat",
+      "quantity": 10,
+      "image": "https://i.ibb.co/9V6SKt9/Gl-ckstier-Dog-Shampoo.jpg"
+    },
+    {
+      "name": "Cat Bed Western Home",
+      "category": "Beds",
+      "price": 24.99,
+      "description": "A cozy bed for your feline friend",
+      "quantity": 6,
+      "image": "https://i.ibb.co/6PfGFB4/Western-Home-Cat-bed.jpg"
+    },
+    {
+      "name": "Hamster Wheel Bucatstate ",
+      "category": "Toys",
+      "price": 36.99,
+      "description": "Provides exercise and entertainment for hamsters",
+      "quantity": 6,
+      "image": "https://i.ibb.co/zRYyFmZ/Bucatstate-Hamster-Wheel.jpg"
+    },
+    {
+      "name": "Dog Leash Freudentier Harmony ",
+      "category": "Accessories",
+      "price": 9.99,
+      "description": "A sturdy leash for walking your dog",
+      "quantity": 15,
+      "image": "https://i.ibb.co/VprZzdt/Freudentier-Harmony-Dog-Leasch.jpg"
+    },
+    {
+      "name": "Rabbit Food Vitakraft Menu ",
+      "category": "Food",
+      "price": 6.99,
+      "description": "Nutritious food for your pet rabbit",
+      "quantity": 12,
+      "image": "https://i.ibb.co/1QtM2Y2/Vitakraft-Menu-Rabbit-Food.jpg"
+    },
+    {
+      "name": "Hamster Bedding Zoo Med Croci Wood Litte",
+      "category": "Accessories",
+      "price": 4.99,
+      "description": "Soft bedding material for your hamster's comfort",
+      "quantity": 10,
+      "image": "https://i.ibb.co/xF25tWJ/Zoo-Med-Croci-Wood-Litte-Hamster-Bedding.jpg"
+    }
+  ]
