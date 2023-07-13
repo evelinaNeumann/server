@@ -11,7 +11,7 @@ mongoose
   .then((x) => {
     const dbName = x.connections[0].name;
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
-
+/*
     // Function to save animals of a specific category
 const saveAnimals = async (animals, category) => {
   for (let animal of animals) {
@@ -68,6 +68,7 @@ const saveAnimals = async (animals, category) => {
 
     // Save shop products
     saveProducts(shopData);
+    */
   })
   .catch((err) => {
     console.error("Error connecting to MongoDB: ", err);
