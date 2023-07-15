@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors());
 
-const cors = require('cors');
+
 
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
@@ -28,6 +28,10 @@ app.use("/api", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 app.use(cors());
+
+const paymentRoutes = require('./routes/payment.routes');
+
+app.use('/payments', paymentRoutes);
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
