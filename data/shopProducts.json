@@ -118,5 +118,278 @@
       "description": "Soft bedding material for your hamster's comfort",
       "quantity": 10,
       "image": "https://i.ibb.co/xF25tWJ/Zoo-Med-Croci-Wood-Litte-Hamster-Bedding.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut VetLine",
+      "category": "Food",
+      "price": 59.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/b7vCddm/wolfsblut-trockenfutter-skin-coat-frontside-12kg.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut VetLine Dental",
+      "category": "Food",
+      "price": 39.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/n0Ljm5X/wolfsblut-vetline-dental-df-12kg.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut Adult Grey Peak",
+      "category": "Food",
+      "price": 18.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/LC54N3g/wolfsblut-trockenfutter-greypeak-front-2kg.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut Adult Wide Plain Dry Food Mix",
+      "category": "Food",
+      "price": 26.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/Bc0zTZx/Wolfsblut-Adult-Wide-Plain-Dry-Food-Mix.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut Adult Mix and Try",
+      "category": "Food",
+      "price": 39.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/r3tB29Z/wolfsblut-bundles-trialpackages.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut Puppy",
+      "category": "Food",
+      "price": 25.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/XCff5jx/2022-02-wolfsblut-bundles-puppy-tastingpackages-wildduck.jpg"
+    },
+    {"name": "Premium Dog Food Wolfsblut Squashies",
+      "category": "Food",
+      "price": 4.99,
+      "description": "High-quality dog food for optimal nutrition",
+      "quantity": 10,
+      "image": "https://i.ibb.co/SN5fdYn/wolfsblut-hundesnacks-squashies-black-bird-4.jpg"
+    },
+    {
+      "name": "Outward Hound Nina Ottosson Dog Brick, Interactive Dog Toy for Treats, Building Level",
+      "category": "Toys",
+      "price": 25.99,
+      "description": "Intelligence toy with medium difficulty level for dogs: The interactive thinking toy Dog Brick is one of our most popular toys with medium difficulty level and provides additional obstacles through which your dog needs to combine several steps together. This keeps him focused and mentally challenged while searching and sniffing out the tasty snacks",
+      "quantity": 5,
+      "image": "https://i.ibb.co/q0CcbJ4/Dog-Brick-Interactive-dog-toy.jpg"
+    },
+    {
+      "name": "Outward Hound Nina Ottosson Treat Tumble, Interactive Treat Intelligence Toy for Dogs, Red, Large",
+      "category": "Toys",
+      "price": 14.99,
+      "description": "Dog intelligence toy for beginners: Start with your puppy at level 1 with the Treat Tumble dog toy from Nina Ottosson by Outward Hound. This colourful treat ball provides a fun way to introduce your puppy to thinking games",
+      "quantity": 5,
+      "image": "https://i.ibb.co/xDh3tgn/treat-intelligence-toy-for-dogs.jpg"
+    },
+    {
+      "name": "HAPPY HACHI Interactive Cat Toy, Self-Employment, Automatic Cat Toy Intelligence with 3 Feathers",
+      "category": "Toys",
+      "price": 14.99,
+      "description": "Cat interactive toy: the cat toy for adult domestic cats runs irregularly (straight forward, backward, rotating, fast and slow speeds). The luminous LED wheels attract cats at night and during the day, and change colours depending on the program. The tail of the toy can hang any toy pendant. Gets even the laziest cat in motion for a more active and healthy lifestyle",
+      "quantity": 5,
+      "image": "https://i.ibb.co/KwDLMCq/happy-hachi-interactive-cat-toy.jpg"
+    },
+    {
+      "name": "ELANOX Set of 10 Toy Mice, Toy Mouse, with Bell and Soaked in Catnip, Cat Toy",
+      "category": "Toys",
+      "price": 12.99,
+      "description": "Pack of 10 short-haired toy mice with bell. The mice are soaked with catnip, various colours",
+      "quantity": 5,
+      "image": "https://i.ibb.co/vVwR6pV/elynox-set-of-10-toy-mice.jpg"
+    },
+    {
+      "name": "Cozy Pet Bed wuuhoo",
+      "category": "Beds",
+      "price": 29.99,
+      "description": "Soft and comfortable bed for your pet's relaxation",
+      "quantity": 3,
+      "image": "https://i.ibb.co/HY3Y6HN/wuuhoo-cosy-pet-bed.jpg"
+    },
+    {
+      "name": "WINDRACING Dog Bed Mat Crate Pet Bed Mat Kennel Pad",
+      "category": "Beds",
+      "price": 19.99,
+      "description": "CALM-ANTI ANXIETY DOG CRATE BED: The soothing dog bed surface with soft luxury faux fur material that feels like motherskin, super cosy and warm. The comfortable dog mats can create a healthy sleeping environment and help them calm down",
+      "quantity": 3,
+      "image": "https://i.ibb.co/dD7fDTs/windracing-dog-bed-matt.jpg"
+    },
+    {
+      "name": "WINDRACING Dog Bed for Large Dogs",
+      "category": "Beds",
+      "price": 29.99,
+      "description": "Improve your pet's sleep quality: Our dog bed uses a granular foam sponge as a lower support layer, a flexible support with multiple densities that evenly relieves pressure. Maintain the natural sleep curve of your pet's body for a long time.",
+      "quantity": 3,
+      "image": "https://i.ibb.co/X7whYcW/windracing-dog-bed-for-large-dogs.jpg"
+    },
+    {
+      "name": "Johnear Cat Hammock Double Layer Wall Hanging Swing Cat Hammock Bed Cushion",
+      "category": "Beds",
+      "price": 39.99,
+      "description": "Double layer bed: the cat hammock bed is made of thick, durable and soft cotton linen fabric. At the top of the cat hammock there are O shaped rings made of cotton, which your house cat can hang. It is the perfect bed for your living room or yard. This cat hammock keeps your cat insulated. The fluffy and thick mat feels like a hugging of the mother and can make your cat comfortable!",
+      "quantity": 3,
+      "image": "https://i.ibb.co/5Tx8n7k/Wall-hanging-swing-cat.jpg"
+    },
+    {
+      "name": "YOUMI Pet Bed with Canopy, Waterproof, Raised Pet Bed with Breathable Mesh, Removable Canopy, Grey for UV Protection, for Small and Medium Dogs",
+      "category": "Beds",
+      "price": 51.99,
+      "description": "Stable and durable design: the pet bed combines robust and durable 600D Oxford fabric and a steel frame that can hold up to 110 lbs, and ensures that your beautiful dog can scratch and play on the dog bed.",
+      "quantity": 3,
+      "image": "https://i.ibb.co/zJf55Dz/youmi-pet-bed-with-canopy.jpg"
+    },
+    {
+      "name": "Guinea Pig Bed Pet Sleeping Bag Cave Nest Cushion Soft Warm Pet Bed Guinea Pig House Pet Winter Bedding Cage Accessories for Small Animals Squirrel Rat Chinchilla Ferrets",
+      "category": "Beds",
+      "price": 11.99,
+      "description": "Premium material: pet nests are made of warm and comfortable PP cotton, soft and not easy to deform, does not fade, strong and durable. Your little pets like this sleeping bag.",
+      "quantity": 3,
+      "image": "https://i.ibb.co/4YtQJGV/pet-sleeping-bed-cave.jpg"
+    },
+    {
+      "name": "SUOXU Calming Bed for Cats and Small Dogs",
+      "category": "Beds",
+      "price": 29.99,
+      "description": "A plush blanket is added to the pet bed, which is more suitable for pets who like to nest in corners and increase their sense of safety",
+      "quantity": 3,
+      "image": "https://i.ibb.co/KD4whG1/suoxu-calming-bed-for-cats.jpg"
+    },
+    {
+      "name": "Costway Cat House Cat Litter Box for Small Animals, Wooden Cat House",
+      "category": "Housing",
+      "price": 54.99,
+      "description": "Sturdy structure: this cat litter box is made of high-quality wood, so it is very robust, durable and long-lasting. It can provide a safe place for your cat",
+      "quantity": 4,
+      "image": "https://i.ibb.co/zVzqsPz/costway-cat-house.jpg"
+    },
+    {
+      "name": "Lovpet® Puppy Playpen Foldable for Small Animals Dogs Cats",
+      "category": "Housing",
+      "price": 43.99,
+      "description": "Robust and durable: the robust dog cage with its 125 cm diameter offers enough space for your pets to play and romp. And when you no longer need it, it can be folded down to a compact size, which can be easily stored. In addition, you can attach the puppy playpen with the included pegs. This provides even more stability outdoors and gives your puppies extra safety.",
+      "quantity": 4,
+      "image": "https://i.ibb.co/b66fx1k/lovepet-puppy-playpen.jpg"
+    },
+    {
+      "name": "REMASIKO Reptile Cage, Magnetic Acrylic",
+      "category": "Housing",
+      "price": 29.99,
+      "description": "Sliding design and magnetic closure for easy feeding and escape, and more convenient for you to groom your pets.",
+      "quantity": 4,
+      "image": "https://i.ibb.co/JjRcDS3/remasiko-reptile-cage.jpg"
+    },
+    {
+      "name": "COSTWAY Cat Cupboard Cat Litter Tray",
+      "category": "Housing",
+      "price": 64.99,
+      "description": "Provides privacy for cats: cats also need privacy. This cat house is designed with a double door cabinet that gives your cat a safe space to poop with confidence. At the same time, it can reduce odours and prevent messy rooms. You can also use it as a cat house with a comfortable cat sleeping bed",
+      "quantity": 4,
+      "image": "https://i.ibb.co/C29yz2n/costway-cat-cupboard.jpg"
+    },
+    {
+      "name": "PawHut Cat House Cat Cave with Cushion",
+      "category": "Housing",
+      "price": 39.99,
+      "description": "Industrial cat cave design: this cosy and stylish cat cave comes in a modern industrial design. The cat house offers your cat a cosy retreat and fits well with different interior styles.",
+      "quantity": 4,
+      "image": "https://i.ibb.co/wKKf5xn/pawhut-cat-house.jpg"
+    },
+    {
+      "name": "TIERHOOD Puppy Run Foldable",
+      "category": "Housing",
+      "price": 54.99,
+      "description": "Easy to assemble: the dog or cat playpen is easy to set up in a short time and folded back in no time. Then you can store it in the included bag.",
+      "quantity": 4,
+      "image": "https://i.ibb.co/LPfffhg/tierhood-puppy-run.jpg"
+    },
+    {
+      "name": "ERKOON Pack of 12 Hamster Chew Toy, Natural Rabbit Guinea Pig Wood Exercise Bell Roller Dental Care Molar Molar Toy for Rats Chinchillas Toy Accessories",
+      "category": "Accessories",
+      "price": 15.99,
+      "description": "Natural: High quality wood origin of wooden chinchilla toys, selected premium wood, natural sun drying, strict control of drying rate, toy with the taste of the sun, which is more convenient to use.",
+      "quantity": 10,
+      "image": "https://i.ibb.co/X892f1R/humster-toy-accessories.jpg"
+    },
+    {
+      "name": "BluePet PfotenBlitz Paw Cleaner for Dogs",
+      "category": "Accessories",
+      "price": 19.99,
+      "description": "Clean paws and clean rug = a valuable dog accessory that should not be missing in any household. Thanks to the paw cleaner, the paws are pleasantly clean after an intensive walk before the dirt lands in your home",
+      "quantity": 10,
+      "image": "https://i.ibb.co/CMqdYdy/paw-cleaner.jpg"
+    },
+    {
+      "name": "First Aid Kit for Dogs, Cats, Small Animals",
+      "category": "Accessories",
+      "price": 31.99,
+      "description": "For inspection, cleaning, treating wounds, feeding, measuring body temperature, suitable for home, car, travel, camp, hiking, camping, hunting and other emergencies",
+      "quantity": 10,
+      "image": "https://i.ibb.co/vm8FfX9/pet-first-aid-kit.jpg"
+    },
+    {
+      "name": "Milu Dog Water Bottle for On the Go",
+      "category": "Accessories",
+      "price": 32.99,
+      "description": "Multifunctional: with our Milu water bottle, both your four-legged friend and you can enjoy water on the go. The two integrated unscrewable containers offer your pet to eat and drink.",
+      "quantity": 10,
+      "image": "https://i.ibb.co/JRFxXcb/water-bottle-on-the-go.jpg"
+    },
+    {
+      "name": "Pet Brushes with Large Button for Cats",
+      "category": "Grooming",
+      "price": 8.99,
+      "description": "1. One-click cleaning button: After you have brushed your pet, simply click on the button. The clasp opens, separates the brushed hair from the metal pin and then wipes the hair. The button of the dog brush for removing short hair at the front saves time and strength when grooming and cleaning.",
+      "quantity": 10,
+      "image": "https://i.ibb.co/YP1p07Z/cat-brush.jpg"
+    },
+    {
+      "name": "Retoo Cordless Dog Clippers for Dogs and Cats ",
+      "category": "Grooming",
+      "price": 15.99,
+      "description": "4 attachments and 5-stage regulation. The dog hair trimmer even has 4 attachments with the possibility of different regulation of cutting. Attached combs with the dimension: 3,6,9,12 mm allow you to set the appropriate length of the animal fur which is very functional because we can adjust it to the season. The care device has additional 5-step regulation from 0.8 to 2 mm in the ring and thus it will allow you even more precise adjustment.",
+      "quantity": 10,
+      "image": "https://i.ibb.co/2sVfqFJ/retooo-cordless-dog-clippers-for-dogs-and-cats.jpg"
+    },
+    {
+      "name": "oneisall Dog Clipper with Vacuum Cleaner",
+      "category": "Grooming",
+      "price": 112.99,
+      "description": "Cut and vacuum in one step: our dog clippers with vacuum cleaner have a suction power of 10.00 kPa (1st Gear ≥3.50Kpa/2 Gear ≥7.00Kpa/3 gear ≥ 10.00 kpa), can collect 99% of animal hair in a vacuum container. The removed loose hair is sucked directly into the vacuum cleaner container when you care for pet hair, no mess, keep your home tidy and clean. Even if you are a beginner, you can easily complete home care.",
+      "quantity": 10,
+      "image": "https://i.ibb.co/SPK4BQ1/oneisall-dog-clipper.jpg"
+    },
+    {
+      "name": "Dog Shampoo Glückstier",
+      "category": "Grooming",
+      "price": 12.99,
+      "description": "Cleans and conditions your dog's coat",
+      "quantity": 10,
+      "image": "https://i.ibb.co/9V6SKt9/Gl-ckstier-Dog-Shampoo.jpg"
+    },
+    {
+      "name": "Dog Shampoo Glückstier",
+      "category": "Grooming",
+      "price": 12.99,
+      "description": "Cleans and conditions your dog's coat",
+      "quantity": 10,
+      "image": "https://i.ibb.co/9V6SKt9/Gl-ckstier-Dog-Shampoo.jpg"
+    },
+    {
+      "name": "Dog Shampoo Glückstier",
+      "category": "Grooming",
+      "price": 12.99,
+      "description": "Cleans and conditions your dog's coat",
+      "quantity": 10,
+      "image": "https://i.ibb.co/9V6SKt9/Gl-ckstier-Dog-Shampoo.jpg"
+    },
+    {
+      "name": "Dog Shampoo Glückstier",
+      "category": "Grooming",
+      "price": 12.99,
+      "description": "Cleans and conditions your dog's coat",
+      "quantity": 10,
+      "image": "https://i.ibb.co/9V6SKt9/Gl-ckstier-Dog-Shampoo.jpg"
     }
   ]
