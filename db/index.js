@@ -39,7 +39,7 @@ const saveAnimals = async (animals, category) => {
       console.error(`Error saving ${category}: ${animal.name}`, err);
     }
   }
-};
+};*/
 
 
     // Function to save products
@@ -61,14 +61,14 @@ const saveAnimals = async (animals, category) => {
       }
     };
 
-    // Save pets
+   /* // Save pets
     saveAnimals(petData.dogs, "dog");
     saveAnimals(petData.cats, "cat");
     saveAnimals(petData.small_pets, "small_pet");
-
+*/
     // Save shop products
-    saveProducts(shopData);
-    */
+    /*saveProducts(shopData);*/
+    
   })
   .catch((err) => {
     console.error("Error connecting to MongoDB: ", err);
