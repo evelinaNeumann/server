@@ -23,22 +23,24 @@ router.post('/intent', async (req, res) => {
 });
 
 router.post('/payment', async (req, res) => {
-  const { id, client_secret } = req.body;
+  const { id } = req.body;
 
   try {
-    const paymentIntent = await stripe.paymentIntents.confirm(id, { client_secret });
-    console.log('Received client_secret:', client_secret);
+    const paymentIntent = await stripe.paymentIntents.confirm(id);
+    console.log('Received client_secret:', paymentIntent.client_secret);
 
     if (paymentIntent.status === 'succeeded') {
+      console.log('Payment succeeded:', paymentIntent.id);
       res.json({ success: true });
     } else {
+      console.log('Payment failed:', paymentIntent.id);
       res.json({ success: false });
     }
   } catch (error) {
+    console.error('Payment error:', error);
     res.status(400).json({
       error: error.message,
     });
   }
 });
-
 module.exports = router;
