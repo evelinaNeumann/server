@@ -17,6 +17,7 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
+
 // Socket.io event handlers
 io.on("connection", (socket) => {
   console.log(`New user connected: ${socket.id}`);
