@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // Define the schema for the Animal model
 const profileSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
+  // _id: mongoose.Schema.Types.ObjectId,
   breed: {
     type: String,
     required: true,
