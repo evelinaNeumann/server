@@ -6,8 +6,9 @@ const petData = require("../data/pets.json");
 
 const shopData = require("../data/shopProducts.json");*/
 const multer = require("multer");
-const shopData = require("../data/shopProducts.json");
-const PetProfile = require("../models/PetProfile.model");
+
+
+
 
 
 const MONGO_URI =
