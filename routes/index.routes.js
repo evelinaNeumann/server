@@ -6,6 +6,7 @@ const shopData = require("../data/shopProducts.json");
 
 const Product = require("../models/Product.model");
 const CartItem = require("../models/CartItem.model");
+const PetProfile = require("../models/PetProfile.model");
 
 router.get("/dogs", (req, res, next) => {
   const dogs = animalsData.dogs;
@@ -97,6 +98,30 @@ router.post("/cart/:productId", async (req, res) => {
   }
 });
 
+router.post("/petprofile", async (req, res) => {
+  try {
+    const { breed, name, age, weight, description, image } = req.body;
+
+    // Create a new instance of the PetProfile model with the submitted data
+    const newProfile = new PetProfile({
+      breed,
+      name,
+      age,
+      weight,
+      description,
+      image,
+    });
+
+    // Save the new pet profile to the database
+    await newProfile.save();
+
+    res.json({ message: "Pet profile submitted successfully" });
+  } catch (error) {
+    console.error("Error submitting pet profile:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 router.delete("/:productId", async (req, res) => {
   const productId = req.params.productId;
 
@@ -113,6 +138,5 @@ router.delete("/:productId", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
-
 
 module.exports = router;
