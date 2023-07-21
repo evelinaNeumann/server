@@ -24,9 +24,7 @@ require("./config")(app);
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
-// Import the testRoute.js and use it
-const testRoute = require("./routes/test.routes");
-app.use("/api", testRoute);
+
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
