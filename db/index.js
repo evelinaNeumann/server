@@ -6,11 +6,6 @@ const petData = require("../data/pets.json");
 
 const shopData = require("../data/shopProducts.json");*/
 const multer = require("multer");
-
-
-
-
-
 const MONGO_URI =
   process.env.MONGODB_URI ||
   "mongodb+srv://admin-pet-app:IT3exFM61TgrwXVJ@cluster0.e34wnon.mongodb.net/";
@@ -21,9 +16,6 @@ mongoose
     const dbName = x.connections[0].name;
 
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
-
-
-
  
     // Function to save animals of a specific category
 const saveAnimals = async (animals, category) => {
