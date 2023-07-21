@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 const Animal = require("../models/Animal.model");
 const Product = require("../models/Product.model");
+/*const Pet = require("../models/Pet.model");
 const petData = require("../data/pets.json");
-const shopData = require("../data/shopProducts.json");
+const shopData = require("../data/shopProducts.json");*/
+const multer = require("multer");
 
 const MONGO_URI = process.env.MONGODB_URI || "mongodb+srv://admin-pet-app:IT3exFM61TgrwXVJ@cluster0.e34wnon.mongodb.net/";
 
@@ -10,8 +12,9 @@ mongoose
   .connect(MONGO_URI)
   .then((x) => {
     const dbName = x.connections[0].name;
+
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
-/*
+
     // Function to save animals of a specific category
 const saveAnimals = async (animals, category) => {
   for (let animal of animals) {
@@ -39,7 +42,7 @@ const saveAnimals = async (animals, category) => {
       console.error(`Error saving ${category}: ${animal.name}`, err);
     }
   }
-};*/
+};
 
 
     // Function to save products
@@ -60,6 +63,23 @@ const saveAnimals = async (animals, category) => {
         }
       }
     };
+
+    //Saving pet data from owner account
+ 
+
+
+// Configure Multer to handle image uploads
+const storage = multer.diskStorage({
+  destination: './uploads/',
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage: storage });
+ 
+ 
+
 
    /* // Save pets
     saveAnimals(petData.dogs, "dog");

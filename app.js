@@ -24,14 +24,18 @@ require("./config")(app);
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
-
+// Import the testRoute.js and use it
+const testRoute = require("./routes/test.routes");
+app.use("/api", testRoute);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
-app.use(cors());
+
 
 const paymentRoutes = require('./routes/payment.routes');
 
 app.use('/payments', paymentRoutes);
+const ownerPageRoutes = require("./routes/ownerPage.routes");
+app.use("/pet", ownerPageRoutes);
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
