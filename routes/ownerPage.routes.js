@@ -6,6 +6,7 @@ const upload = multer({ dest: "uploads/" });
 const Pet = require("../models/Pet.model");
 const jwt = require("jsonwebtoken");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
+require("dotenv").config();
 
 
 
@@ -13,9 +14,9 @@ const { isAuthenticated } = require("../middleware/jwt.middleware");
 //Owner Page Routes
 // Configure Cloudinary
 cloudinary.config({
-  cloud_name:  'dnstseshn',
-  api_key:  '537231312596738',
-  api_secret:  '-pktoj2PPvkowDtf5NcnoakXdpI' ,
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 // POST /pet/petprofile - Creates a new pet and associates it with the authenticated owner

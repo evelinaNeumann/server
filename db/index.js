@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const Animal = require("../models/Animal.model");
 const Product = require("../models/Product.model");
+require("dotenv").config();
 /*const Pet = require("../models/Pet.model");
 const petData = require("../data/pets.json");
 
 const shopData = require("../data/shopProducts.json");*/
 const multer = require("multer");
 const MONGO_URI =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://admin-pet-app:IT3exFM61TgrwXVJ@cluster0.e34wnon.mongodb.net/";
+  process.env.MONGODB_URI 
 
 mongoose
   .connect(MONGO_URI)

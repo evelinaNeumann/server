@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+require("dotenv").config();
 
-const stripe = require('stripe')('sk_test_51NRxMIAJ0RHQyfzi4NnT6YrdyFi2d6xeiTa2dCz2gJqzOSsxKP4lz0DbBcyDT2az2RCbcVlaUNm3etKnEar9AZzO003ug0bRII');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 router.post('/intent', async (req, res) => {
   try {
