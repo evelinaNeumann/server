@@ -7,6 +7,7 @@ const Pet = require("../models/Pet.model");
 const jwt = require("jsonwebtoken");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
 require("dotenv").config();
+const Pets = require("../models/Pet.model")
 
 
 
@@ -64,5 +65,44 @@ router.post("/pet/upload", upload.single("file"), (req, res) => {
   });
 });
 
+router.get("/pets", async (req, res) => {
+  try {
+    const allPets = await Pet.find();
+    res.json(allPets);
+  } catch (error) {
+    console.error("Error fetching cart items:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.get("/dogs", async (req, res) => {
+  try {
+    const allDogs = await Pet.find({ category: 'dog' });
+    res.json(allDogs);
+  } catch (error) {
+    console.error("Error fetching dogs:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.get("/cats", async (req, res) => {
+  try {
+    const allCats = await Pet.find({ category: 'cat' });
+    res.json(allCats);
+  } catch (error) {
+    console.error("Error fetching dogs:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.get("/small_animals", async (req, res) => {
+  try {
+    const allLittleAnimals = await Pet.find({ category: 'small_animal' });
+    res.json(allLittleAnimals);
+  } catch (error) {
+    console.error("Error fetching dogs:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 module.exports = router;

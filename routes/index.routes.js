@@ -6,7 +6,6 @@ const shopData = require("../data/shopProducts.json");
 
 const Product = require("../models/Product.model");
 const CartItem = require("../models/CartItem.model");
-const PetProfile = require("../models/PetProfile.model");
 
 router.get("/dogs", (req, res, next) => {
   const dogs = animalsData.dogs;
