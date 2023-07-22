@@ -13,7 +13,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "process.env.ORIGIN",
+    // origin: "process.env.ORIGIN",
+    origin: "https://66.241.124.205/",
     methods: ["GET", "POST"],
   },
 });
