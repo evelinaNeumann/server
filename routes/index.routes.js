@@ -57,8 +57,20 @@ router.get("/shop_products/:id", async (req, res) => {
 
 router.get("/cart", async (req, res) => {
   try {
-    const cartItems = await CartItem.find();
-    res.json(cartItems);
+    const cartItems = await CartItem.find().populate('productId'); // Use populate to fetch product information
+
+    // Format the cart items data to include the product image URL
+    const formattedCartItems = cartItems.map((cartItem) => ({
+      _id: cartItem._id,
+      productId: cartItem.productId,
+      image: cartItem.productId.image, // Include the product image URL
+      name: cartItem.productId.name,
+      category: cartItem.productId.category,
+      quantity: cartItem.quantity,
+      price: cartItem.price,
+    }));
+
+    res.json(formattedCartItems);
   } catch (error) {
     console.error("Error fetching cart items:", error);
     res.status(500).json({ error: "Internal server error" });
@@ -80,6 +92,7 @@ router.post("/cart/:productId", async (req, res) => {
     if (!cartItem) {
       cartItem = new CartItem({
         productId: product._id,
+        image:product.image,
         name: product.name,
         category: product.category,
         quantity: 1,
