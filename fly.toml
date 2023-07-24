@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for petapp on 2023-07-22T11:27:11+02:00
+# fly.toml app configuration file generated for petapp on 2023-07-24T14:05:15+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -7,9 +7,19 @@ app = "petapp"
 primary_region = "cdg"
 
 [http_service]
-  internal_port = 3000
+  internal_port = 5005
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
+[env]
+PORT = "5005"
+ORIGIN = "http://localhost:3000"
+TOKEN_SECRET = "y0uRt0k3N$eCr3T"
+SOCKET_PORT = "5000"
+STRIPE_SECRET_KEY = "sk_test_51NRxMIAJ0RHQyfzi4NnT6YrdyFi2d6xeiTa2dCz2gJqzOSsxKP4lz0DbBcyDT2az2RCbcVlaUNm3etKnEar9AZzO003ug0bRII"
+MONGODB_URI = "mongodb+srv://admin-pet-app:IT3exFM61TgrwXVJ@cluster0.e34wnon.mongodb.net"
+CLOUD_NAME = "dnstseshn"
+API_KEY = "537231312596738"
+API_SECRET = "-pktoj2PPvkowDtf5NcnoakXdpI"
