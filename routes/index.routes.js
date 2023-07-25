@@ -6,6 +6,8 @@ const shopData = require("../data/shopProducts.json");
 
 const Product = require("../models/Product.model");
 const CartItem = require("../models/CartItem.model");
+const Pet = require("../models/Pet.model");
+const Owner = require("../models/Owner.model");
 
 router.get("/dogs", (req, res, next) => {
   const dogs = animalsData.dogs;
@@ -26,6 +28,26 @@ router.get("/all_pets", (req, res, next) => {
   const allPets = animalsData;
   res.json(allPets);
 });
+
+router.get("/owner/:ownerId", async (req, res) => {
+  try {
+    const ownerId = req.params.ownerId;
+
+    // Find the owner by ID
+    const owner = await Owner.findById(ownerId);
+
+    if (owner) {
+      return res.json(owner);
+    } else {
+      return res.json(null); // If the owner with the given ID is not found, return null
+    }
+  } catch (error) {
+    console.error("Error fetching owner data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
 
 router.get("/shop_products", async (req, res, next) => {
   try {
