@@ -48,6 +48,25 @@ router.get("/owner/:ownerId", async (req, res) => {
 });
 
 
+router.get("/pets/:ownerId", async (req, res) => {
+  try {
+    const ownerId = req.params.ownerId;
+
+    // Find the pets associated with the owner using the ownerId
+    const pets = await Pet.find({ owner: ownerId });
+
+    res.json(pets);
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+
+
+
+
 
 router.get("/shop_products", async (req, res, next) => {
   try {
