@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://benevolent-druid-8e6edb.netlify.app",
+    origin: "https://splendid-haupia-ff5f9e.netlify.app",
     methods: ["GET", "POST"],
   },
 });
