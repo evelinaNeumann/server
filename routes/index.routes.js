@@ -139,4 +139,17 @@ router.delete("/:productId", async (req, res) => {
   }
 });
 
+router.get("/pets/:userId", async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    const pets = await Pet.find({ owner: userId });
+
+    res.json(pets);
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;

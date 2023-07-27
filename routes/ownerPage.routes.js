@@ -18,6 +18,7 @@ cloudinary.config({
 // POST /pet/petprofile - Creates a new pet and associates it with the authenticated owner
 router.post("/petprofile", isAuthenticated, async (req, res, next) => {
   try {
+    console.log(req.body);
     const { name, category, type, age, temper, special_needs, image } =
       req.body;
 
@@ -81,6 +82,55 @@ router.delete("/pet/deletepet/:id", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+
+router.get("/pet/pets/:ownerId", async (req, res) => {
+  try {
+    const ownerId = req.params.ownerId;
+
+    // Find the pets associated with the owner using the ownerId
+    const pets = await Pet.find({ owner: ownerId });
+
+    res.json(pets);
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// GET /pet/petprofile/:id - Fetches a pet profile by ID
+// router.get("/pet/petprofile/:id", isAuthenticated, async (req, res, next) => {
+//   try {
+//     const petId = req.params.id;
+//     //const ownerId = req.payload._id;
+
+//     const pet = await Pet.findOne({ _id: petId, owner: ownerId });
+
+//     if (!pet) {
+//       return res.status(404).json({ error: "Pet not found" });
+//     }
+
+//     res.json({ pet });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
+// router.get("/pet/petprofile/:id", isAuthenticated, async (req, res, next) => {
+//   try {
+//     const petId = req.params.id;
+//     const ownerId = req.payload._id; // Uncommented to get the authenticated owner ID
+
+//     const pet = await Pet.findOne({ _id: petId, owner: ownerId });
+
+//     if (!pet) {
+//       return res.status(404).json({ error: "Pet not found" });
+//     }
+
+//     res.json({ pet });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
 
 // PUT /pet/petprofile/:id - Updates an existing pet profile
 router.put("/pet/editpet/:id", isAuthenticated, async (req, res, next) => {
