@@ -1,7 +1,7 @@
 //doing the first commit test
 // ℹ️ Gets access to environment variables/settings
 // https://www.npmjs.com/package/dotenv
-require("dotenv").config();
+require("dotenv").config({ path: ".env.local", override: true });
 const cors = require("cors");
 
 // ℹ️ Connects to the database
