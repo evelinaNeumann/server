@@ -7,10 +7,7 @@ const Pet = require("../models/Pet.model");
 const jwt = require("jsonwebtoken");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
 require("dotenv").config();
-const Pets = require("../models/Pet.model")
-
-
-
+const Pets = require("../models/Pet.model");
 
 //Owner Page Routes
 // Configure Cloudinary
@@ -23,7 +20,8 @@ cloudinary.config({
 // POST /pet/petprofile - Creates a new pet and associates it with the authenticated owner
 router.post("/petprofile", isAuthenticated, async (req, res, next) => {
   try {
-    const { name, category, type, age, temper, special_needs, image } = req.body;
+    const { name, category, type, age, temper, special_needs, image } =
+      req.body;
 
     // Get the authenticated owner ID from the request payload
     const ownerId = req.payload._id;
@@ -50,7 +48,6 @@ router.post("/petprofile", isAuthenticated, async (req, res, next) => {
   }
 });
 
-
 // Handle image upload
 router.post("/pet/upload", upload.single("file"), (req, res) => {
   const file = req.file;
@@ -63,6 +60,71 @@ router.post("/pet/upload", upload.single("file"), (req, res) => {
       res.json({ publicId: result.public_id });
     }
   });
+});
+// DELETE /pet/petprofile/:id - Deletes an existing pet profile
+router.delete("/pet/deletepet/:id", isAuthenticated, async (req, res, next) => {
+  try {
+    const petId = req.params.id; // Get the pet ID from the request params
+    const ownerId = req.payload._id; // Get the authenticated owner ID from the request payload
+
+    // Check if the authenticated owner is the owner of the pet
+    const pet = await Pet.findOne({ _id: petId, owner: ownerId });
+    if (!pet) {
+      return res.status(404).json({ error: "Pet not found" });
+    }
+    // Remove the pet from the database
+    await Pet.findByIdAndRemove(petId);
+
+    // Send a response indicating successful deletion
+    res.json({ message: "Pet deleted successfully" });
+  } catch (err) {
+    next(err);
+  }
+});
+router.get("/pets/:ownerId", async (req, res) => {
+  try {
+    const ownerId = req.params.ownerId;
+
+    // Find the pets associated with the owner using the ownerId
+    const pets = await Pet.find({ owner: ownerId });
+
+    res.json(pets);
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+// PUT /pet/petprofile/:id - Updates an existing pet profile
+router.put("/pet/editpet/:id", isAuthenticated, async (req, res, next) => {
+  try {
+    const petId = req.params.id; // Get the pet ID from the request params
+    const ownerId = req.payload._id; // Get the authenticated owner ID from the request payload
+
+    // Check if the authenticated owner is the owner of the pet
+    const pet = await Pet.findOne({ _id: petId, owner: ownerId });
+    if (!pet) {
+      return res.status(404).json({ error: "Pet not found" });
+    }
+
+    const { name, category, type, age, temper, special_needs, image } =
+      req.body;
+
+    // Update the pet profile with the new data
+    pet.name = name;
+    pet.category = category;
+    pet.type = type;
+    pet.age = age;
+    pet.temper = temper;
+    pet.special_needs = special_needs;
+    pet.image = image;
+
+    // Save the updated pet profile
+    await pet.save();
+    // Send a response with the updated pet object
+    res.json({ pet });
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.get("/pets", async (req, res) => {
@@ -77,7 +139,7 @@ router.get("/pets", async (req, res) => {
 
 router.get("/dogs", async (req, res) => {
   try {
-    const allDogs = await Pet.find({ category: 'dog' });
+    const allDogs = await Pet.find({ category: "dog" });
     res.json(allDogs);
   } catch (error) {
     console.error("Error fetching dogs:", error);
@@ -87,7 +149,7 @@ router.get("/dogs", async (req, res) => {
 
 router.get("/cats", async (req, res) => {
   try {
-    const allCats = await Pet.find({ category: 'cat' });
+    const allCats = await Pet.find({ category: "cat" });
     res.json(allCats);
   } catch (error) {
     console.error("Error fetching dogs:", error);
@@ -97,7 +159,7 @@ router.get("/cats", async (req, res) => {
 
 router.get("/small_animals", async (req, res) => {
   try {
-    const allLittleAnimals = await Pet.find({ category: 'small_animal' });
+    const allLittleAnimals = await Pet.find({ category: "small_animal" });
     res.json(allLittleAnimals);
   } catch (error) {
     console.error("Error fetching dogs:", error);
