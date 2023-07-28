@@ -23,7 +23,9 @@ router.post("/signup", (req, res, next) => {
 
   // Check if email or password or name are provided as empty strings
   if (email === "" || password === "" || name === "" || preference === "") {
-    res.status(400).json({ message: "Provide email, password, name and preference" });
+    res
+      .status(400)
+      .json({ message: "Provide email, password, name and preference" });
     return;
   }
 
@@ -123,11 +125,30 @@ router.post("/login", (req, res, next) => {
 
 // POST /auth/ownersignup
 router.post("/ownersignup", (req, res, next) => {
-  const { ownerEmail, ownerPassword, ownerName, ownerPhone, city, state, zip, country } = req.body;
-console.log(req.body);
+  const {
+    ownerEmail,
+    ownerPassword,
+    ownerName,
+    ownerPhone,
+    city,
+    state,
+    zip,
+    country,
+  } = req.body;
+  console.log(req.body);
   // Check if email or password or name are provided as empty strings
-  if (ownerEmail === "" || ownerPassword === "" || ownerName === "" || ownerPhone === "" || city === "" || state === ""  || country === "") {
-    res.status(400).json({ message: "Provide email, password, name and address" });
+  if (
+    ownerEmail === "" ||
+    ownerPassword === "" ||
+    ownerName === "" ||
+    ownerPhone === "" ||
+    city === "" ||
+    state === "" ||
+    country === ""
+  ) {
+    res
+      .status(400)
+      .json({ message: "Provide email, password, name and address" });
     return;
   }
 
@@ -163,15 +184,42 @@ console.log(req.body);
 
       // Create the new user in the database
       // We return a pending promise, which allows us to chain another `then`
-      return Owner.create({ ownerEmail, ownerPassword: hashedPassword, ownerName, ownerPhone, city, state, zip, country });
+      return Owner.create({
+        ownerEmail,
+        ownerPassword: hashedPassword,
+        ownerName,
+        ownerPhone,
+        city,
+        state,
+        zip,
+        country,
+      });
     })
     .then((createdOwner) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
-      const { ownerEmail, ownerName, ownerPhone, city, state, zip, country, _id } = createdOwner;
+      const {
+        ownerEmail,
+        ownerName,
+        ownerPhone,
+        city,
+        state,
+        zip,
+        country,
+        _id,
+      } = createdOwner;
 
       // Create a new object that doesn't expose the password
-      const owner = { ownerEmail, ownerName, ownerPhone, city, state, zip, country, _id };
+      const owner = {
+        ownerEmail,
+        ownerName,
+        ownerPhone,
+        city,
+        state,
+        zip,
+        country,
+        _id,
+      };
 
       // Send a json response containing the user object
       res.status(201).json({ owner: owner });
@@ -199,7 +247,10 @@ router.post("/ownerlogin", (req, res, next) => {
       }
 
       // Compare the provided password with the one saved in the database
-      const passwordCorrect = bcrypt.compareSync(ownerPassword, foundUser.ownerPassword);
+      const passwordCorrect = bcrypt.compareSync(
+        ownerPassword,
+        foundUser.ownerPassword
+      );
 
       if (passwordCorrect) {
         // Deconstruct the user object to omit the password
@@ -222,9 +273,105 @@ router.post("/ownerlogin", (req, res, next) => {
     })
     .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
 });
+router.post("/editprofile", (req, res, next) => {
+  const { email, name, preference } = req.body;
 
+  // Check if email or name or preference are provided as empty strings
+  if (email === "" || name === "" || preference === "") {
+    res.status(400).json({ message: "Provide email, name, and preference" });
+    return;
+  }
 
+  // This regular expression check that the email is of a valid format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if (!emailRegex.test(email)) {
+    res.status(400).json({ message: "Provide a valid email address." });
+    return;
+  }
 
+  // Find and update the user's information in the database
+  User.findOneAndUpdate(
+    { email }, // Filter for finding the user by email
+    { name, preference, email }, // Fields to update
+    { new: true } // Options: return the updated document in the response
+  )
+    .then((updatedUser) => {
+      // If the user with the provided email doesn't exist, send an error response
+      if (!updatedUser) {
+        res.status(404).json({ message: "User not found." });
+        return;
+      }
+
+      // Deconstruct the updated user object to omit the password
+      // We should never expose passwords publicly
+      const { email, name, preference, _id } = updatedUser;
+
+      // Create a new object that doesn't expose the password
+      const user = { email, name, preference, _id };
+
+      // Send a json response containing the updated user object
+      res.status(200).json({ user: user });
+    })
+    .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
+});
+
+router.post("/editownerprofile", (req, res, next) => {
+  const { ownerName, ownerEmail, ownerPhone, city, zip, country } = req.body;
+
+  // Check if email or name or preference are provided as empty strings
+  if (
+    ownerName === "" ||
+    ownerEmail === "" ||
+    ownerPhone === "" ||
+    city === "" ||
+    zip === "" ||
+    country === ""
+  ) {
+    res.status(400).json({ message: "Please fill all the fields" });
+    return;
+  }
+
+  // This regular expression check that the email is of a valid format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if (!emailRegex.test(ownerEmail)) {
+    res.status(400).json({ message: "Provide a valid email address." });
+    return;
+  }
+
+  // Find and update the user's information in the database
+  Owner.findOneAndUpdate(
+    { ownerEmail }, // Filter for finding the user by email
+    { ownerName, ownerEmail, ownerPhone, city, zip, country }, // Fields to update
+    { new: true } // Options: return the updated document in the response
+  )
+    .then((updatedUser) => {
+      // If the user with the provided email doesn't exist, send an error response
+      if (!updatedUser) {
+        res.status(404).json({ message: "User not found." });
+        return;
+      }
+
+      // Deconstruct the updated user object to omit the password
+      // We should never expose passwords publicly
+      const { ownerName, ownerEmail, ownerPhone, city, zip, country, _id } =
+        updatedUser;
+
+      // Create a new object that doesn't expose the password
+      const user = {
+        ownerName,
+        ownerEmail,
+        ownerPhone,
+        city,
+        zip,
+        country,
+        _id,
+      };
+
+      // Send a json response containing the updated user object
+      res.status(200).json({ user: user });
+    })
+    .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
+});
 
 // GET  /auth/verify  -  Used to verify JWT stored on the client
 router.get("/verify", isAuthenticated, (req, res, next) => {
